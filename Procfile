@@ -1,1 +1,1 @@
-bot: python client.py -p 79036191454
+web: python client.py -p 79036191454
