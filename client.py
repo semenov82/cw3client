@@ -57,9 +57,9 @@ proxy_port = 8080
 secret = 'ddfb175d6d7f820cdc73ab11edbdcdbd74'
 DC1_ip = '149.154.167.40'
 DC_port = 443
-#client = TelegramClient(fss, api_id, api_hash, proxy=(proxy_ip, proxy_port, secret), connection=connection.tcpmtproxy.ConnectionTcpMTProxy)
+client = TelegramClient(fss, api_id, api_hash, proxy=(proxy_ip, proxy_port, secret), connection=connection.tcpmtproxy.ConnectionTcpMTProxy)
 #client.session.set_dc(1, DC1_ip, DC_port)
-client = TelegramClient(fss, api_id, api_hash)
+#client = TelegramClient(fss, api_id, api_hash)
 client.start()
 if not client.is_user_authorized():
     if nchek1 in nchek: # Проверяем наличие сессии, если её нет, то запрашиваем логин код
