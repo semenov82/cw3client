@@ -549,7 +549,7 @@ def all_messages(event):
             logging.info('Пин '+corder)
         elif '#custom' in event.raw_text:
             comm = re.search('#custom (.*)', event.raw_text).group(1)
-            client.send_message(event.message.to_id, f'Команда {comm} отправляется')
+            client.send_message(event.message.to_id, f"Команда {comm} отправляется")
             action_list.append(comm)
         elif re.search('(\/g_def|\/g_atk) (.*)', event.raw_text):
             out = 'Отправляемся!\n{}'.format(event.raw_text)
