@@ -55,10 +55,9 @@ fss = "./sessions/" + nchek1
 proxy_ip = 'ru.tgproxy.today'
 proxy_port = 8080
 secret = 'ddfb175d6d7f820cdc73ab11edbdcdbd74'
-proxy = (proxy_ip, proxy_port, secret)
 DC1_ip = '149.154.167.40'
 DC_port = 443
-client = TelegramClient(fss, api_id, api_hash, update_workers=3, spawn_read_thread=False, proxy,  connection=connection.tcpmtproxy.ConnectionTcpMTProxy)
+client = TelegramClient(fss, api_id, api_hash, update_workers=3, spawn_read_thread=False, proxy=(proxy_ip, proxy_port, secret),  connection=connection.tcpmtproxy.ConnectionTcpMTProxy)
 client.session.set_dc(1, DC1_ip, DC_port)
 client.start()
 if not client.is_user_authorized():
