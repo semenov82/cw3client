@@ -15,7 +15,7 @@ from datetime import datetime
 from getopt import getopt
 from getpass import getpass
 from collections import deque
-from telethon import TelegramClient, events
+from telethon import TelegramClient, events, connection
 from telethon.errors import SessionPasswordNeededError
 from telethon.tl.functions.messages import GetBotCallbackAnswerRequest
 logging.basicConfig(format=u'%(filename)s[LINE:%(lineno)-3s]# %(levelname)-5s [%(asctime)s] %(message)s',
