@@ -53,6 +53,7 @@ except:
 nchek1 = str(phone) + '.session'
 fss = "./sessions/" + nchek1
 client = TelegramClient(fss, api_id, api_hash, update_workers=3, spawn_read_thread=False,device_model='FenicuBot')
+client.set_proxy(MTPROTO, "ru.tgproxy.today", 8080, "ddfb175d6d7f820cdc73ab11edbdcdbd74")
 client.connect()
 if not client.is_user_authorized():
     if nchek1 in nchek: # Проверяем наличие сессии, если её нет, то запрашиваем логин код
